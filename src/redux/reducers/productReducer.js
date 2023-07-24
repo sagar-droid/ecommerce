@@ -16,11 +16,13 @@ export const productReducer = (state = initialState, { type, payload }) => {
   }
 };
 
-export const selProdReducer =(state = {},{type,payload}) =>{
-  switch(type){
+export const selProdReducer = (state = {}, { type, payload }) => {
+  switch (type) {
     case ActionTypes.SEL_PROD:
-      return{...state, ...payload}
+      return { ...state, ...payload };
+    case ActionTypes.REM_SEL_PROD:
+      return {};
     default:
-        return state;
+      return state;
   }
-}
+};

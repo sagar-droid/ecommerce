@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ProductListing from "./containers/ProductListing";
 import ProductDetails from "./containers/ProductDetails";
 import "./App.css";
+import ShoppingCart from "./containers/ShoppingCart";
 
 const App = () => {
   return (
@@ -13,14 +14,11 @@ const App = () => {
         <Routes>
           <Route path="/" element={<ProductListing />} />
           <Route path="/product/:productId" element={<ProductDetails />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="/cart" element={<ShoppingCart />} />
         </Routes>
       </Router>
     </div>
   );
-};
-const NotFound = () => {
-  return <div>404 Not Found!</div>;
 };
 
 export default App;

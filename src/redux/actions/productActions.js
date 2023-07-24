@@ -12,3 +12,8 @@ export const selProd = (product) => {
     payload: product,
   };
 };
+export const remSelProd = () => {
+  return {
+    type: ActionTypes.REM_SEL_PROD,
+  };
+};
