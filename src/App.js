@@ -5,6 +5,15 @@ import ProductListing from "./containers/ProductListing";
 import ProductDetails from "./containers/ProductDetails";
 import "./App.css";
 import ShoppingCart from "./containers/ShoppingCart";
+import ReactGA from "react-ga4";
+
+ReactGA.initialize("UA-284842417-1");
+
+ReactGA.send({
+  hitType: "pageview",
+  page: "https://ecommerce-tawny-seven.vercel.app/",
+  title: "Custom Title",
+});
 
 const App = () => {
   return (
